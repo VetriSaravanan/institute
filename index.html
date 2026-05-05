@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Payitragam Professional Institute | Government Certified Courses Tirunelveli</title>
+<meta name="description" content="Payitragam Professional Institute - Affiliated to TNSCPE. 30+ Government Certified Para Medical, Vocational and Healthcare Diploma Courses with 100% Job Placement Assistance in Tirunelveli."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root{
+  --navy:#1a1a6e;--blue:#1565c0;--blue-l:#1976d2;--red:#e63946;--cyan:#00b4d8;
+  --gold:#ffd23f;--teal:#0f766e;--purple:#7c3aed;--amber:#d97706;
+  --bg:#f8fafc;--white:#fff;--text:#1e293b;--text2:#64748b;
+  --border:#e2e8f0;--shadow:0 4px 20px rgba(0,0,0,.07);
+  --shadow-md:0 8px 32px rgba(0,0,0,.1);--shadow-lg:0 16px 48px rgba(0,0,0,.12);
+  --r:12px;--r-lg:16px;
+  --fh:'Poppins',sans-serif;--fb:'Inter',sans-serif;
+  --nav-h:68px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--fh)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1240px;margin:0 auto;padding:0 24px}
+section{scroll-margin-top:var(--nav-h)}
+
+/* ── LOADER ── */
+#loader{position:fixed;inset:0;background:var(--navy);display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .5s,visibility .5s}
+#loader.hide{opacity:0;visibility:hidden}
+.ld-box{text-align:center;color:#fff}
+.ld-logo{width:72px;height:72px;border-radius:16px;background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:800;margin:0 auto 18px;font-family:var(--fh)}
+.ld-ring{width:50px;height:50px;border:3px solid rgba(255,255,255,.2);border-top-color:var(--red);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 14px}
+.ld-name{font-size:18px;font-weight:700;font-family:var(--fh)}
+.ld-sub{font-size:12px;color:rgba(255,255,255,.55);margin-top:4px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── MAINTENANCE PAGE ── */
+#maintenance-page{display:none;min-height:100vh;background:linear-gradient(135deg,var(--navy) 0%,#1a3a7c 100%);align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:40px 24px;position:relative;overflow:hidden}
+#maintenance-page.show{display:flex}
+.mp-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(0,180,216,.15),transparent 70%);top:-100px;right:-100px;pointer-events:none}
+.mp-glow2{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(230,57,70,.1),transparent 70%);bottom:-50px;left:-50px;pointer-events:none}
+.mp-inner{position:relative;z-index:1;max-width:560px}
+.mp-icon{font-size:80px;margin-bottom:24px;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.mp-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,210,63,.15);border:1px solid rgba(255,210,63,.3);padding:8px 20px;border-radius:50px;font-size:12px;font-weight:700;color:var(--gold);margin-bottom:20px;letter-spacing:.5px}
+.mp-title{font-size:clamp(28px,5vw,48px);font-weight:800;color:#fff;margin-bottom:16px;line-height:1.2}
+.mp-msg{font-size:16px;color:rgba(255,255,255,.72);line-height:1.7;margin-bottom:36px;max-width:440px}
+.mp-divider{width:60px;height:3px;background:linear-gradient(90deg,var(--red),var(--cyan));border-radius:2px;margin:0 auto 32px}
+.mp-contact{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.mp-contact-item{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:12px 22px;border-radius:50px;font-size:14px;font-weight:600;color:#fff;transition:.3s}
+.mp-contact-item:hover{background:rgba(255,255,255,.15)}
+.mp-contact-item i{font-size:14px;color:var(--cyan)}
+.mp-affil{margin-top:32px;font-size:12px;color:rgba(255,255,255,.4)}
+/* progress bar animation */
+.mp-progress{width:200px;height:4px;background:rgba(255,255,255,.12);border-radius:2px;margin:24px auto 0;overflow:hidden}
+.mp-progress-bar{height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:2px;animation:progress 3s ease-in-out infinite}
+@keyframes progress{0%{width:0%;margin-left:0}50%{width:70%;margin-left:0}100%{width:0%;margin-left:100%}}
+
+/* ── TOAST ── */
+#toast-wrap{position:fixed;top:80px;right:20px;z-index:3000;display:flex;flex-direction:column;gap:10px}
+.toast{background:#fff;border-radius:12px;padding:13px 18px;box-shadow:var(--shadow-md);font-size:13.5px;font-weight:500;min-width:280px;border-left:3.5px solid;display:flex;align-items:center;gap:9px;animation:tIn .3s ease,tOut .3s ease 3.7s forwards}
+.toast.success{border-color:var(--teal);color:#065f46}
+.toast.error{border-color:var(--red);color:var(--red)}
+@keyframes tIn{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes tOut{to{transform:translateX(100%);opacity:0}}
+
+/* ── SITE WRAPPER ── */
+#site-wrapper{display:none}
+#site-wrapper.show{display:block}
+
+/* ── NAVBAR DESKTOP ── */
+#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0;height:var(--nav-h);display:flex;align-items:center;transition:box-shadow .3s}
+#navbar.scrolled{box-shadow:var(--shadow)}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
+.nav-brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-logo-box{width:44px;height:44px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:#fff;font-family:var(--fh);flex-shrink:0}
+.nav-logo-img{width:44px;height:44px;border-radius:10px;object-fit:contain}
+.nav-title{font-size:14.5px;font-weight:700;color:var(--navy);font-family:var(--fh);line-height:1.2}
+.nav-title span{display:block;font-size:10px;font-weight:400;color:var(--text2);margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none}
+.nav-links a{font-size:13.5px;font-weight:500;color:var(--text);padding:7px 12px;border-radius:8px;transition:.25s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);background:rgba(21,101,192,.07)}
+.nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-phone-link{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--navy);white-space:nowrap}
+.nav-phone-link i{color:var(--blue);font-size:12px}
+.nav-enq-btn{background:var(--blue);color:#fff;padding:9px 22px;border-radius:8px;font-size:13px;font-weight:700;transition:.25s;border:none;cursor:pointer;font-family:var(--fb);white-space:nowrap}
+.nav-enq-btn:hover{background:#1251a3;transform:translateY(-1px)}
+
+/* ── HAMBURGER (mobile only) ── */
+.nav-hamburger{display:none;flex-direction:column;gap:5.5px;cursor:pointer;padding:6px;background:none;border:none;flex-shrink:0}
+.nav-hamburger span{width:24px;height:2.5px;background:var(--navy);border-radius:2px;transition:.3s;display:block}
+.nav-hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ── MOBILE NAV DRAWER ── */
+#mobile-nav{display:none;position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;z-index:999;background:rgba(0,0,0,.5);backdrop-filter:blur(4px)}
+#mobile-nav.open{display:block}
+.mn-drawer{background:#fff;width:min(320px,88vw);height:100%;position:absolute;left:0;top:0;overflow-y:auto;transform:translateX(-100%);transition:transform .3s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column}
+#mobile-nav.open .mn-drawer{transform:translateX(0)}
+.mn-header{background:var(--navy);padding:20px 20px 16px;display:flex;align-items:center;gap:12px}
+.mn-logo{width:42px;height:42px;border-radius:10px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:#fff;font-family:var(--fh);flex-shrink:0}
+.mn-name{font-size:13.5px;font-weight:700;color:#fff;font-family:var(--fh);line-height:1.2}
+.mn-name span{display:block;font-size:10px;color:rgba(255,255,255,.55);font-weight:400;margin-top:1px}
+.mn-links{flex:1;padding:12px 0}
+.mn-link{display:flex;align-items:center;gap:12px;padding:13px 20px;font-size:14.5px;font-weight:500;color:var(--text);transition:.2s;border-left:3px solid transparent}
+.mn-link:hover,.mn-link.active{color:var(--blue);background:rgba(21,101,192,.06);border-left-color:var(--blue)}
+.mn-link i{width:20px;text-align:center;font-size:15px;color:var(--text2)}
+.mn-link:hover i,.mn-link.active i{color:var(--blue)}
+.mn-divider{height:1px;background:var(--border);margin:8px 20px}
+.mn-footer{padding:16px 20px;border-top:1px solid var(--border)}
+.mn-phone{display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--bg);border-radius:10px;margin-bottom:10px;font-size:14px;font-weight:600;color:var(--navy)}
+.mn-phone i{color:var(--blue)}
+.mn-enq{display:block;width:100%;padding:13px;background:var(--blue);color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--fb);text-align:center;transition:.2s}
+.mn-enq:hover{background:#1251a3}
+.mn-close-area{position:absolute;left:min(320px,88vw);top:0;right:0;bottom:0}
+
+/* ── MARQUEE ── */
+.marquee-bar{background:var(--navy);padding:9px 0;overflow:hidden;margin-top:var(--nav-h)}
+.mq-inner{display:flex;align-items:center}
+.mq-label{background:var(--red);padding:5px 20px 5px 16px;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 50%,calc(100% - 10px) 100%,0 100%);font-size:11px;font-weight:700;color:#fff;white-space:nowrap;flex-shrink:0;font-family:var(--fh);letter-spacing:.5px}
+.mq-scroll{overflow:hidden;flex:1}
+.mq-track{display:flex;gap:40px;animation:marquee 35s linear infinite;white-space:nowrap}
+.mq-track:hover{animation-play-state:paused}
+.mq-item{font-size:13px;color:rgba(255,255,255,.85);white-space:nowrap;font-weight:500;display:flex;align-items:center;gap:8px}
+.mq-item::before{content:"";width:5px;height:5px;background:var(--red);border-radius:50%;flex-shrink:0}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── SHARED ── */
+.sec-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(21,101,192,.08);color:var(--blue);font-size:11.5px;font-weight:600;padding:5px 14px;border-radius:30px;margin-bottom:12px;border:1px solid rgba(21,101,192,.18);letter-spacing:.4px;text-transform:uppercase}
+.sec-title{font-size:clamp(24px,3.5vw,38px);font-weight:700;color:var(--navy);margin-bottom:12px;line-height:1.25}
+.sec-sub{font-size:15.5px;color:var(--text2);max-width:580px;margin:0 auto 44px;line-height:1.7}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:11px 26px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;transition:.25s;border:none;font-family:var(--fb)}
+.btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:#1251a3;transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:#c0392b;transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--navy);border:2px solid rgba(255,255,255,.25)}.btn-white:hover{background:rgba(255,255,255,.9)}
+.btn-outline{background:transparent;color:var(--blue);border:2px solid var(--blue)}.btn-outline:hover{background:var(--blue);color:#fff}
+
+/* ── HERO ── */
+#home{min-height:calc(100vh - var(--nav-h));background:linear-gradient(135deg,var(--navy) 0%,#1a3a7c 50%,#0d2657 100%);position:relative;overflow:hidden;display:flex;align-items:center;padding:60px 0}
+.hero-bg-pat{position:absolute;inset:0;opacity:.04;background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:20px 20px;pointer-events:none}
+.hero-bg-glow{position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(0,180,216,.15) 0%,transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;position:relative;z-index:2}
+.hero-affil{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:7px 16px;border-radius:50px;font-size:12px;font-weight:500;color:rgba(255,255,255,.85);margin-bottom:18px;width:fit-content}
+.hero-affil i{color:var(--gold);font-size:11px}
+.hero-title{font-size:clamp(30px,4.5vw,52px);font-weight:800;color:#fff;line-height:1.15;margin-bottom:16px}
+.hero-title .hl{color:var(--gold)}
+.hero-sub{font-size:15.5px;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:28px;max-width:500px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:28px}
+.hbadge{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:6px 14px;border-radius:50px;font-size:12px;font-weight:600;color:#fff}
+.hbadge.gold{background:rgba(255,210,63,.12);border-color:rgba(255,210,63,.35);color:var(--gold)}
+.hbadge.red{background:rgba(230,57,70,.12);border-color:rgba(230,57,70,.35);color:#fca5a5}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:36px}
+.h-stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px;text-align:center}
+.h-stat .num{font-size:26px;font-weight:800;color:#fff;line-height:1;font-family:var(--fh)}
+.h-stat .lbl{font-size:10.5px;color:rgba(255,255,255,.55);font-weight:500;margin-top:4px}
+/* hero visual */
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.hero-card-wrap{position:relative;width:100%;max-width:420px}
+.hero-main-card{background:rgba(255,255,255,.95);border-radius:20px;padding:26px;box-shadow:0 24px 64px rgba(0,0,0,.25)}
+.hc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px}
+.hc-ttl{font-size:13.5px;font-weight:700;color:var(--navy);font-family:var(--fh)}
+.hc-new{background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px}
+.hc-list{display:flex;flex-direction:column;gap:9px;margin-bottom:18px}
+.hci{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:500;color:var(--text)}
+.hci-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.hero-placement{background:linear-gradient(135deg,#fef3c7,#fef9c3);border:1px solid #fcd34d;border-radius:12px;padding:13px;text-align:center}
+.hp-pct{font-size:30px;font-weight:800;color:#92400e;font-family:var(--fh);line-height:1}
+.hp-lbl{font-size:11.5px;font-weight:600;color:#a16207;margin-top:2px}
+.hero-float{position:absolute;background:rgba(255,255,255,.95);border-radius:12px;padding:9px 14px;box-shadow:0 8px 24px rgba(0,0,0,.14);font-size:12px;font-weight:700;color:var(--navy);white-space:nowrap;display:flex;align-items:center;gap:7px}
+.hf1{top:-18px;left:-18px;animation:fl1 4s ease-in-out infinite}
+.hf2{bottom:-18px;right:-18px;animation:fl2 5s ease-in-out infinite}
+@keyframes fl1{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes fl2{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* ── WHY ── */
+#why{padding:88px 0;background:#fff}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.feat-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:28px;transition:.3s;position:relative;overflow:hidden}
+.feat-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:var(--blue);background:#fff}
+.feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--fc-clr,var(--blue))}
+.fc-icon{width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px}
+.feat-card h3{font-size:16.5px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.feat-card p{font-size:13.5px;color:var(--text2);line-height:1.7}
+.fc-num{position:absolute;bottom:10px;right:14px;font-size:40px;font-weight:800;color:rgba(0,0,0,.04);font-family:var(--fh)}
+
+/* ── BENEFITS ── */
+#benefits{padding:68px 0;background:linear-gradient(135deg,var(--navy),#0d2657)}
+.ben-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;position:relative;z-index:1}
+.ben-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:22px;text-align:center;transition:.25s}
+.ben-card:hover{background:rgba(255,255,255,.14);transform:translateY(-4px)}
+.bc-icon{font-size:34px;margin-bottom:10px;display:block}
+.ben-card h3{font-size:14.5px;font-weight:700;color:#fff;margin-bottom:5px}
+.ben-card p{font-size:12.5px;color:rgba(255,255,255,.68);line-height:1.6}
+
+/* ── COURSES ── */
+#courses{padding:88px 0;background:var(--bg)}
+.cf-row{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-bottom:32px}
+.cf-btn{padding:9px 20px;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--text);transition:.25s;font-family:var(--fb)}
+.cf-btn:hover,.cf-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.crs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(288px,1fr));gap:22px}
+.cc{background:#fff;border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:.3s;position:relative}
+.cc:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--blue)}
+.cc-bar{height:4px;background:var(--cc-c,var(--blue))}
+.cc-body{padding:20px}
+.cc-type{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px;letter-spacing:.3px}
+.cc-name{font-size:15.5px;font-weight:700;color:var(--navy);margin-bottom:9px;line-height:1.3;font-family:var(--fh);min-height:42px}
+.cc-meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.cc-meta-item{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text2);font-weight:500}
+.cc-meta-item i{color:var(--blue);font-size:11px}
+.cc-desc{font-size:12.5px;color:var(--text2);line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:38px}
+.cc-footer{border-top:1px solid var(--border);padding-top:14px}
+.cc-enq{width:100%;padding:10px;background:var(--blue);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;transition:.25s;font-family:var(--fb)}
+.cc-enq:hover{background:#1251a3}
+.cc-thumb{width:100%;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,#e8f0fe 0%,#dbeafe 100%);position:relative}
+.cc-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:.3s}
+.cc:hover .cc-thumb img{transform:scale(1.05)}
+.cc-thumb-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:40px;opacity:.5}
+.crs-empty{grid-column:1/-1;text-align:center;padding:60px;color:var(--text2)}
+
+
+
+/* ── ABOUT ── */
+#about{padding:88px 0;background:#fff}
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-card{background:var(--navy);border-radius:20px;padding:32px;color:#fff;text-align:center;position:relative;overflow:hidden}
+.about-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:rgba(255,255,255,.04);border-radius:50%}
+.ab-big{font-size:60px;font-weight:800;color:var(--gold);line-height:1;font-family:var(--fh)}
+.ab-lbl{font-size:13.5px;color:rgba(255,255,255,.65);margin-top:6px}
+.ab-mini-g{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.ab-mini{background:rgba(255,255,255,.08);border-radius:10px;padding:13px;text-align:center}
+.ab-mini-num{font-size:22px;font-weight:700;color:#fff;font-family:var(--fh)}
+.ab-mini-lbl{font-size:10.5px;color:rgba(255,255,255,.55);margin-top:2px}
+.ab-fl{position:absolute;background:#fff;border-radius:12px;padding:11px 15px;box-shadow:var(--shadow-md)}
+.ab-fl-t{top:-14px;right:-14px;animation:fl1 4s ease-in-out infinite}
+.ab-fl-b{bottom:-14px;left:-14px;animation:fl2 5s ease-in-out infinite}
+.ab-fl-content{font-size:11.5px;font-weight:700;color:var(--navy);text-align:center}
+.ab-fl-icon{font-size:18px;margin-bottom:3px}
+.ab-badges{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0}
+.ab-badge-item{background:rgba(21,101,192,.07);border:1px solid rgba(21,101,192,.15);color:var(--blue);padding:6px 13px;border-radius:8px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px}
+.about-para{font-size:14.5px;color:var(--text2);line-height:1.8;margin-bottom:14px}
+.ab-mv{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:18px}
+.ab-mv-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r);padding:15px}
+.ab-mv-card h4{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:5px;display:flex;align-items:center;gap:6px}
+.ab-mv-card p{font-size:12.5px;color:var(--text2);line-height:1.6}
+
+/* ── GALLERY ── */
+#gallery{padding:88px 0;background:var(--bg)}
+.gal-f{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-bottom:26px}
+.gal-btn{padding:8px 19px;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--text);transition:.25s}
+.gal-btn:hover,.gal-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.gal-item{border-radius:var(--r);overflow:hidden;position:relative;aspect-ratio:4/3;cursor:pointer;box-shadow:var(--shadow);transition:.3s}
+.gal-item:hover{transform:scale(1.03);box-shadow:var(--shadow-lg)}
+.gal-item img{width:100%;height:100%;object-fit:cover}
+.gal-ph{width:100%;height:100%;background:linear-gradient(135deg,var(--navy),var(--blue-l));display:flex;align-items:center;justify-content:center;font-size:36px}
+.gal-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,110,.78),transparent);opacity:0;transition:.3s;display:flex;align-items:flex-end;padding:14px}
+.gal-item:hover .gal-ov{opacity:1}
+.gal-cap{color:#fff;font-size:12.5px;font-weight:600}
+.gal-empty{grid-column:1/-1;text-align:center;padding:60px;color:var(--text2)}
+/* lightbox */
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:2000;display:none;align-items:center;justify-content:center}
+#lb.open{display:flex}
+.lb-inner{position:relative;max-width:880px;width:90%;max-height:90vh}
+#lb-img{width:100%;max-height:80vh;object-fit:contain;border-radius:12px}
+#lb-cap{color:#fff;text-align:center;margin-top:10px;font-size:13.5px;font-weight:500}
+.lb-x{position:absolute;top:-44px;right:0;color:#fff;font-size:28px;cursor:pointer;background:none;border:none;transition:.3s}
+.lb-x:hover{color:var(--red)}
+.lb-a{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);color:#fff;border:none;font-size:19px;width:44px;height:44px;border-radius:50%;cursor:pointer;transition:.3s;display:flex;align-items:center;justify-content:center}
+.lb-a:hover{background:rgba(21,101,192,.7)}
+.lb-prev{left:-56px}
+.lb-next{right:-56px}
+
+/* ── ANNOUNCEMENTS ── */
+#announcements{padding:88px 0;background:linear-gradient(135deg,var(--navy),#0d2657);position:relative;overflow:hidden}
+#announcements::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(0,180,216,.1),transparent 70%);pointer-events:none}
+.ann-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px;margin-top:44px;position:relative;z-index:1}
+.ann-card{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:24px;transition:.25s}
+.ann-card:hover{background:rgba(255,255,255,.14);transform:translateY(-3px)}
+.ann-card.pinned{border-color:rgba(255,210,63,.38);background:rgba(255,210,63,.06)}
+.ann-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:13px}
+.ann-badge{font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;color:#fff}
+.ann-pin{color:var(--gold);font-size:12px;font-weight:700}
+.ann-date{font-size:11.5px;color:rgba(255,255,255,.5);margin-bottom:7px;display:flex;align-items:center;gap:5px}
+.ann-card h3{font-size:16.5px;font-weight:700;color:#fff;margin-bottom:7px;font-family:var(--fh)}
+.ann-card p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.7}
+.ann-empty{grid-column:1/-1;text-align:center;padding:40px;color:rgba(255,255,255,.4)}
+
+/* ── CONTACT ── */
+#contact{padding:88px 0;background:#fff}
+.br-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-bottom:56px}
+.br-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:.25s}
+.br-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--blue)}
+.br-head{background:var(--navy);padding:18px 22px;display:flex;align-items:center;gap:12px}
+.br-head i{color:var(--gold);font-size:19px}
+.br-head h3{color:#fff;font-size:16.5px;font-weight:700;font-family:var(--fh)}
+.br-body{padding:20px}
+.b-info{display:flex;align-items:flex-start;gap:9px;margin-bottom:12px;font-size:13.5px;color:var(--text2);line-height:1.6}
+.b-info i{color:var(--red);font-size:12.5px;margin-top:2px;flex-shrink:0}
+.map-box{width:100%;height:175px;border-radius:10px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:32px;overflow:hidden;border:none;margin-top:9px}
+.enq-sect{max-width:620px;margin:0 auto}
+.enq-sect h3{font-size:24px;font-weight:700;color:var(--navy);text-align:center;margin-bottom:24px;font-family:var(--fh)}
+.enq-wrap{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:32px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{margin-bottom:18px}
+.fg label{font-size:13px;font-weight:600;color:#475569;display:block;margin-bottom:6px}
+.fg input,.fg select,.fg textarea{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:9px;font-size:13.5px;font-family:var(--fb);background:#fff;color:var(--text);outline:none;transition:.25s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(21,101,192,.09)}
+.fg textarea{height:96px;resize:vertical}
+.f-submit{width:100%;padding:13px;background:var(--blue);color:#fff;border:none;border-radius:50px;font-size:15px;font-weight:700;cursor:pointer;transition:.25s;font-family:var(--fh);display:flex;align-items:center;justify-content:center;gap:7px}
+.f-submit:hover{background:#1251a3;transform:translateY(-2px);box-shadow:0 8px 24px rgba(21,101,192,.28)}
+.f-submit:disabled{opacity:.6;transform:none;cursor:not-allowed}
+
+/* ── FOOTER ── */
+footer{background:#0d1520;color:#fff;padding:60px 0 0}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:44px;margin-bottom:44px}
+.ft-logo-row{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.ft-logo-box{width:42px;height:42px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:800;color:#fff;font-family:var(--fh)}
+.ft-brand-name{font-size:14px;font-weight:700;color:#fff;font-family:var(--fh);line-height:1.2}
+.ft-brand-name span{display:block;font-size:10.5px;font-weight:400;color:rgba(255,255,255,.45)}
+.ft-brand p{font-size:13px;color:rgba(255,255,255,.48);line-height:1.8;margin-bottom:18px}
+.soc-row{display:flex;gap:9px}
+.soc{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;font-size:14px;transition:.25s}
+.soc:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-2px)}
+.ft-col h4{font-size:13.5px;font-weight:700;color:#fff;margin-bottom:15px;font-family:var(--fh)}
+.ft-col ul{list-style:none}
+.ft-col ul li{margin-bottom:9px}
+.ft-col ul li a{font-size:13px;color:rgba(255,255,255,.48);transition:.25s}
+.ft-col ul li a:hover{color:var(--cyan)}
+.ft-ci{display:flex;gap:9px;margin-bottom:12px;font-size:13px;color:rgba(255,255,255,.52);align-items:flex-start}
+.ft-ci i{color:var(--cyan);margin-top:2px;flex-shrink:0}
+.ft-affil{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:8px 15px;border-radius:8px;font-size:11px;color:rgba(255,255,255,.45);margin-bottom:22px;display:flex;align-items:center;gap:7px}
+.ft-affil i{color:var(--gold)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.06);padding:18px 0;display:flex;align-items:center;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.3);flex-wrap:wrap;gap:8px}
+
+/* ── FLOATS ── */
+.floats{position:fixed;bottom:26px;right:26px;z-index:900;display:flex;flex-direction:column;gap:11px;align-items:center}
+.float-btn{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 16px rgba(0,0,0,.18);cursor:pointer;transition:.25s;border:none}
+.float-btn:hover{transform:scale(1.1)}
+.wa-btn{background:#25d366;color:#fff}
+.top-btn{background:var(--navy);color:#fff;opacity:0;pointer-events:none}
+.top-btn.show{opacity:1;pointer-events:all}
+
+/* ── MODAL ── */
+#enq-modal{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1500;display:none;align-items:center;justify-content:center;padding:20px}
+#enq-modal.open{display:flex}
+.em-box{background:#fff;border-radius:18px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.2);animation:mIn .25s ease}
+@keyframes mIn{from{transform:scale(.95);opacity:0}to{transform:scale(1);opacity:1}}
+.em-hdr{background:var(--navy);border-radius:18px 18px 0 0;padding:20px 26px;display:flex;align-items:center;justify-content:space-between}
+.em-hdr h3{color:#fff;font-size:16.5px;font-weight:700;font-family:var(--fh)}
+.em-x{background:rgba(255,255,255,.15);border:none;color:#fff;width:30px;height:30px;border-radius:7px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
+.em-body{padding:24px}
+.em-course{background:rgba(21,101,192,.08);border:1px solid rgba(21,101,192,.18);border-radius:9px;padding:9px 14px;font-size:13.5px;font-weight:600;color:var(--blue);margin-bottom:18px;display:flex;align-items:center;gap:7px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero-grid,.about-g{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  /* Show hamburger, hide desktop nav elements */
+  .nav-links,.nav-phone-link,.nav-enq-btn{display:none!important}
+  .nav-hamburger{display:flex!important}
+  /* Mobile adjustments */
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .fr,.br-grid,.ab-mv{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr}
+  .lb-prev{left:-10px}
+  .lb-next{right:-10px}
+  .ft-bottom{flex-direction:column;text-align:center}
+  .ann-grid,.ben-grid{grid-template-columns:1fr}
+  .enq-wrap{padding:20px}
+}
+@media(max-width:480px){
+  .hero-btns{flex-direction:column}
+  .hero-btns .btn{justify-content:center}
+  .mp-contact{flex-direction:column;align-items:center}
+  .cf-row,.gal-f{gap:7px}
+  .cf-btn,.gal-btn{font-size:12px;padding:7px 14px}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="ld-box">
+    <div class="ld-logo" id="ld-logo">P</div>
+    <div class="ld-ring"></div>
+    <div class="ld-name" id="ld-name">Payitragam Institute</div>
+    <div class="ld-sub">Loading...</div>
+  </div>
+</div>
+
+<!-- MAINTENANCE PAGE -->
+<div id="maintenance-page">
+  <div class="mp-glow"></div>
+  <div class="mp-glow2"></div>
+  <div class="mp-inner">
+    <div class="mp-badge"><i class="fa fa-tools"></i> MAINTENANCE MODE</div>
+    <div class="mp-icon">🔧</div>
+    <h1 class="mp-title" id="mp-title">Site Under Maintenance</h1>
+    <p class="mp-msg" id="mp-msg">We are currently updating our website to serve you better. We will be back shortly!</p>
+    <div class="mp-divider"></div>
+    <div class="mp-contact" style="display:none">
+      <a href="tel:9003845060" class="mp-contact-item" id="mp-ph1"><i class="fa fa-phone"></i><span>9003845060</span></a>
+      <a href="tel:9952740025" class="mp-contact-item" id="mp-ph2"><i class="fa fa-phone"></i><span>9952740025</span></a>
+    </div>
+    <div class="mp-progress"><div class="mp-progress-bar"></div></div>
+    <div class="mp-affil" id="mp-affil">Affiliated to TNSCPE · Approved by Central & State Government</div>
+  </div>
+</div>
+
+<!-- SITE WRAPPER (shown when NOT in maintenance) -->
+<div id="site-wrapper">
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-wrap">
+      <div class="nav-brand">
+        <div class="nav-logo-box" id="nav-logo-box" style="overflow:hidden">P</div>
+        <div class="nav-title" id="nav-title">Payitragam Professional Institute<span>E for Education, P for Payitragam</span></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#announcements">Notices</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="tel:9003845060" class="nav-phone-link" id="nav-phone"><i class="fa fa-phone"></i><span id="nav-phone-txt">9003845060</span></a>
+        <button class="nav-enq-btn" onclick="openEnqModal()">Enquire Now</button>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV DRAWER -->
+<div id="mobile-nav" onclick="handleMobileNavClick(event)">
+  <div class="mn-drawer">
+    <div class="mn-header">
+      <div class="mn-logo" id="mn-logo" style="overflow:hidden">P</div>
+      <div class="mn-name" id="mn-name">Payitragam Institute<span>Professional Courses</span></div>
+    </div>
+    <nav class="mn-links">
+      <a href="#home" class="mn-link active" onclick="closeMobileNav()"><i class="fa fa-home"></i>Home</a>
+      <a href="#courses" class="mn-link" onclick="closeMobileNav()"><i class="fa fa-graduation-cap"></i>Courses</a>
+      <a href="#why" class="mn-link" onclick="closeMobileNav()"><i class="fa fa-star"></i>Why Choose Us</a>
+      <a href="#about" class="mn-link" onclick="closeMobileNav()"><i class="fa fa-info-circle"></i>About Us</a>
+      <div class="mn-divider"></div>
+      <a href="#gallery" class="mn-link" onclick="closeMobileNav()"><i class="fa fa-images"></i>Gallery</a>
+      <a href="#announcements" class="mn-link" onclick="closeMobileNav()"><i class="fa fa-bullhorn"></i>Announcements</a>
+      <a href="#contact" class="mn-link" onclick="closeMobileNav()"><i class="fa fa-map-marker-alt"></i>Contact</a>
+    </nav>
+    <div class="mn-footer">
+      <a href="tel:9003845060" class="mn-phone"><i class="fa fa-phone"></i><span id="mn-ph1-txt">9003845060</span></a>
+      <a href="tel:9952740025" class="mn-phone" style="margin-top:-2px"><i class="fa fa-phone"></i><span id="mn-ph2-txt">9952740025</span></a>
+      <button class="mn-enq" onclick="closeMobileNav();openEnqModal()"><i class="fa fa-paper-plane"></i> Enquire Now</button>
+    </div>
+  </div>
+  <div class="mn-close-area" onclick="closeMobileNav()"></div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-bar">
+  <div class="container">
+    <div class="mq-inner">
+      <div class="mq-label">COURSES</div>
+      <div class="mq-scroll">
+        <div class="mq-track" id="mq-track">
+          <span class="mq-item">Para Medical Diploma</span><span class="mq-item">100% Job Placement</span>
+          <span class="mq-item">Govt Certified</span><span class="mq-item">Stipend During Training</span>
+          <span class="mq-item">Nursing Assistant</span><span class="mq-item">CT Scan Technology</span>
+          <span class="mq-item">Medical Lab Technology</span><span class="mq-item">OT Technology</span>
+          <span class="mq-item">Radiology Technician</span><span class="mq-item">Hotel Management</span>
+          <span class="mq-item">Para Medical Diploma</span><span class="mq-item">100% Job Placement</span>
+          <span class="mq-item">Govt Certified</span><span class="mq-item">Stipend During Training</span>
+          <span class="mq-item">Nursing Assistant</span><span class="mq-item">CT Scan Technology</span>
+          <span class="mq-item">Medical Lab Technology</span><span class="mq-item">OT Technology</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="home" style="padding-top:40px">
+  <div class="hero-bg-pat"></div>
+  <div class="hero-bg-glow"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content" data-aos="fade-right">
+        <div class="hero-affil"><i class="fa fa-certificate"></i><span id="hero-affil">Affiliated to TNSCPE · Approved by Govt of India</span></div>
+        <h1 class="hero-title" id="hero-headline">Build Your Career in<br><span class="hl">Healthcare & Beyond</span></h1>
+        <p class="hero-sub" id="hero-sub">Government Certified Courses · 100% Job Placement Assistance · Stipend During Training · Safe Hostel Facility</p>
+        <div class="hero-badges">
+          <div class="hbadge gold"><i class="fa fa-shield-halved"></i>Govt Certified</div>
+          <div class="hbadge red"><i class="fa fa-briefcase"></i>100% Placement</div>
+          <div class="hbadge"><i class="fa fa-house"></i>Hostel Available</div>
+          <div class="hbadge"><i class="fa fa-indian-rupee-sign"></i>Stipend Support</div>
+        </div>
+        <div class="hero-btns">
+          <a href="#courses" class="btn btn-white" id="hero-cta1"><i class="fa fa-book-open"></i>Explore Courses</a>
+          <button class="btn btn-red" onclick="openEnqModal()" id="hero-cta2"><i class="fa fa-paper-plane"></i>Enquire Now</button>
+        </div>
+        <div class="hero-stats">
+          <div class="h-stat"><div class="num"><span id="cnt-c">0</span><sup>+</sup></div><div class="lbl">Courses</div></div>
+          <div class="h-stat"><div class="num"><span id="cnt-p">0</span><sup>%</sup></div><div class="lbl">Placement</div></div>
+          <div class="h-stat"><div class="num"><span id="cnt-b">0</span></div><div class="lbl">Branches</div></div>
+          <div class="h-stat"><div class="num"><span id="cnt-s">0</span><sup>+</sup></div><div class="lbl">Students</div></div>
+        </div>
+      </div>
+      <div class="hero-visual" data-aos="fade-left">
+        <div class="hero-card-wrap">
+          <div class="hero-float hf1"><i class="fa fa-stethoscope" style="color:var(--blue)"></i>Para Medical</div>
+          <div class="hero-float hf2"><i class="fa fa-award" style="color:var(--gold)"></i>Govt Certified</div>
+          <div class="hero-main-card">
+            <div class="hc-top"><div class="hc-ttl">Featured Programs</div><div class="hc-new">New Batch</div></div>
+            <div class="hc-list">
+              <div class="hci"><div class="hci-icon" style="background:#e8f0fe">🏥</div>Para Medical Diploma (2 Yrs)</div>
+              <div class="hci"><div class="hci-icon" style="background:#fce4ec">🔬</div>Medical Lab Technology</div>
+              <div class="hci"><div class="hci-icon" style="background:#e8f5e9">💊</div>Pharmacy Assistant</div>
+              <div class="hci"><div class="hci-icon" style="background:#fff3e0">☢️</div>X-Ray & CT Scan Tech</div>
+            </div>
+            <div class="hero-placement">
+              <div class="hp-pct">100%</div>
+              <div class="hp-lbl">Job Placement Assistance</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" style="padding:88px 0">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up" style="text-align:center">
+      <span class="sec-badge"><i class="fa fa-star"></i>Why Us</span>
+      <h2 class="sec-title">Why Choose Payitragam?</h2>
+      <p class="sec-sub">Government-certified curriculum, real hospital training, and guaranteed placement to set you up for a successful career.</p>
+    </div>
+    <div class="feat-grid" id="features-grid">
+      <div class="feat-card" style="--fc-clr:#1565c0" data-aos="fade-up" data-aos-delay="0"><span class="fc-num">01</span><div class="fc-icon" style="background:#e6f1fb">🏛️</div><h3>Government Certified</h3><p>Affiliated to Tamilnadu State Council of Professional Education, approved by Central & State Government and Ministry of Corporate Affairs.</p></div>
+      <div class="feat-card" style="--fc-clr:#e63946" data-aos="fade-up" data-aos-delay="80"><span class="fc-num">02</span><div class="fc-icon" style="background:#fce4ec">🎯</div><h3>100% Job Placement</h3><p>Guaranteed job placement assistance with our extensive network of hospitals, clinics, and industries across Tamil Nadu and beyond.</p></div>
+      <div class="feat-card" style="--fc-clr:#d97706" data-aos="fade-up" data-aos-delay="160"><span class="fc-num">03</span><div class="fc-icon" style="background:#fef3c7">💰</div><h3>Stipend During Training</h3><p>Unique earn-while-you-learn model — receive monthly stipend support throughout your entire course training period.</p></div>
+      <div class="feat-card" style="--fc-clr:#0f766e" data-aos="fade-up" data-aos-delay="240"><span class="fc-num">04</span><div class="fc-icon" style="background:#d1fae5">🏠</div><h3>Safe Hostel Facility</h3><p>Secure, comfortable hostel accommodation available for outstation students with safe environment and basic amenities.</p></div>
+      <div class="feat-card" style="--fc-clr:#7c3aed" data-aos="fade-up" data-aos-delay="320"><span class="fc-num">05</span><div class="fc-icon" style="background:#ede9fe">👨‍⚕️</div><h3>Expert Faculty</h3><p>Certified, experienced trainers with real-world healthcare and industry expertise ensuring quality education and mentorship.</p></div>
+      <div class="feat-card" style="--fc-clr:#00b4d8" data-aos="fade-up" data-aos-delay="400"><span class="fc-num">06</span><div class="fc-icon" style="background:#cffafe">🔬</div><h3>Practical Training</h3><p>Hands-on clinical and field training integrated with every course — real hospital exposure from day one of your program.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits" style="padding:68px 0;background:linear-gradient(135deg,var(--navy),#0d2657)">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:36px" data-aos="fade-up">
+      <span class="sec-badge" style="background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.2)">Our Benefits</span>
+      <h2 class="sec-title" style="color:#fff">What You Get</h2>
+    </div>
+    <div class="ben-grid" id="benefits-grid">
+      <div class="ben-card" data-aos="zoom-in" data-aos-delay="0"><span class="bc-icon">🏛️</span><h3>Government Certified</h3><p>Central & State Govt recognised certificate</p></div>
+      <div class="ben-card" data-aos="zoom-in" data-aos-delay="80"><span class="bc-icon">💰</span><h3>Stipend During Training</h3><p>Earn monthly stipend throughout your course</p></div>
+      <div class="ben-card" data-aos="zoom-in" data-aos-delay="160"><span class="bc-icon">🏠</span><h3>Safe Hostel</h3><p>Secure accommodation for outstation students</p></div>
+      <div class="ben-card" data-aos="zoom-in" data-aos-delay="240"><span class="bc-icon">🎯</span><h3>100% Placement</h3><p>Guaranteed job placement assistance</p></div>
+      <div class="ben-card" data-aos="zoom-in" data-aos-delay="320"><span class="bc-icon">🎓</span><h3>Expert Faculty</h3><p>Certified trainers with real-world experience</p></div>
+      <div class="ben-card" data-aos="zoom-in" data-aos-delay="400"><span class="bc-icon">🏥</span><h3>Hospital Training</h3><p>Real clinical exposure from day one</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses" style="padding:88px 0">
+  <div class="container">
+    <div style="text-align:center" data-aos="fade-up">
+      <span class="sec-badge"><i class="fa fa-graduation-cap"></i>Courses</span>
+      <h2 class="sec-title">Our Course Catalog</h2>
+      <p class="sec-sub">30+ government-certified courses across healthcare, para-medical, and vocational disciplines with guaranteed placement.</p>
+    </div>
+    <div class="cf-row" id="course-filters" data-aos="fade-up">
+      <button class="cf-btn active" data-filter="all">All Courses</button>
+      <button class="cf-btn" data-filter="certificate">Certificate</button>
+      <button class="cf-btn" data-filter="para-medical">Para Medical</button>
+      <button class="cf-btn" data-filter="diploma">Diploma</button>
+      <button class="cf-btn" data-filter="bvoc-mvoc">B-VOC / M-VOC</button>
+      <button class="cf-btn" data-filter="vocational">Vocational</button>
+    </div>
+    <div class="crs-grid" id="courses-grid">
+      <div class="crs-empty"><i class="fa fa-spinner fa-spin" style="font-size:28px;display:block;margin-bottom:10px;color:var(--blue)"></i>Loading courses...</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="padding:88px 0;background:#fff">
+  <div class="container">
+    <div class="about-g">
+      <div class="about-visual" data-aos="fade-right">
+        <div class="about-card">
+          <div class="ab-big">2018</div>
+          <div class="ab-lbl">Established · Tirunelveli</div>
+          <div class="ab-mini-g">
+            <div class="ab-mini"><div class="ab-mini-num">30+</div><div class="ab-mini-lbl">Courses</div></div>
+            <div class="ab-mini"><div class="ab-mini-num">2</div><div class="ab-mini-lbl">Branches</div></div>
+            <div class="ab-mini"><div class="ab-mini-num">100%</div><div class="ab-mini-lbl">Placement</div></div>
+            <div class="ab-mini"><div class="ab-mini-num">1000+</div><div class="ab-mini-lbl">Students</div></div>
+          </div>
+        </div>
+        <div class="ab-fl ab-fl-t"><div class="ab-fl-icon">🏛️</div><div class="ab-fl-content">TNSCPE<br>Affiliated</div></div>
+        <div class="ab-fl ab-fl-b"><div class="ab-fl-icon">🇮🇳</div><div class="ab-fl-content">Govt<br>Approved</div></div>
+      </div>
+      <div class="about-content" data-aos="fade-left">
+        <span class="sec-badge">About Us</span>
+        <h2 class="sec-title">Who Are We?</h2>
+        <p class="about-para" id="about-story">Payitragam Professional Institute is affiliated to Tamilnadu State Council of Professional Education and approved by Central and State Government and Ministry of Corporate Affairs. We offer 30+ government-certified healthcare and vocational courses with 100% placement guarantee.</p>
+        <div class="ab-badges" id="about-badges">
+          <div class="ab-badge-item"><i class="fa fa-check"></i>TNSCPE Affiliated</div>
+          <div class="ab-badge-item"><i class="fa fa-check"></i>Ministry of Corporate Affairs</div>
+          <div class="ab-badge-item"><i class="fa fa-check"></i>Central Govt Approved</div>
+          <div class="ab-badge-item"><i class="fa fa-check"></i>State Govt Approved</div>
+        </div>
+        <div class="ab-mv">
+          <div class="ab-mv-card"><h4><i class="fa fa-bullseye" style="color:var(--red)"></i>Our Mission</h4><p id="about-mission">Empower students with practical skills and government-certified qualifications for real healthcare employment.</p></div>
+          <div class="ab-mv-card"><h4><i class="fa fa-eye" style="color:var(--blue)"></i>Our Vision</h4><p id="about-vision">Become the most trusted professional training institute across Tamil Nadu with 100% placement guarantee.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="padding:88px 0">
+  <div class="container">
+    <div style="text-align:center" data-aos="fade-up">
+      <span class="sec-badge"><i class="fa fa-images"></i>Gallery</span>
+      <h2 class="sec-title">Campus & Events</h2>
+      <p class="sec-sub">See life at Payitragam Professional Institute — campus, training, events, and placement ceremonies.</p>
+    </div>
+    <div class="gal-f" id="gal-filters" data-aos="fade-up"></div>
+    <div class="gal-grid" id="gal-grid"><div class="gal-empty">📸 Gallery loading...</div></div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lb">
+  <div class="lb-inner">
+    <button class="lb-x" id="lb-close">✕</button>
+    <button class="lb-a lb-prev" id="lb-prev"><i class="fa fa-chevron-left"></i></button>
+    <img id="lb-img" src="" alt="Gallery"/>
+    <div id="lb-cap"></div>
+    <button class="lb-a lb-next" id="lb-next"><i class="fa fa-chevron-right"></i></button>
+  </div>
+</div>
+
+<!-- ANNOUNCEMENTS -->
+<section id="announcements" style="padding:88px 0">
+  <div class="container">
+    <div style="text-align:center" data-aos="fade-up">
+      <span class="sec-badge" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.2)"><i class="fa fa-bullhorn"></i>Notices</span>
+      <h2 class="sec-title" style="color:#fff">Announcements</h2>
+      <p class="sec-sub" style="color:rgba(255,255,255,.65)">Latest updates, admission news, placement drives, and important notices from Payitragam.</p>
+    </div>
+    <div class="ann-grid" id="ann-grid"><div class="ann-empty">Loading...</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding:88px 0;background:#fff">
+  <div class="container">
+    <div style="text-align:center" data-aos="fade-up">
+      <span class="sec-badge"><i class="fa fa-map-marker-alt"></i>Contact</span>
+      <h2 class="sec-title">Find Us</h2>
+      <p class="sec-sub">Visit us at either of our two branches or send an enquiry — we respond within 24 hours.</p>
+    </div>
+    <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:36px" data-aos="fade-up">
+      <a href="tel:9003845060" style="display:flex;align-items:center;gap:9px;background:var(--navy);color:#fff;padding:13px 26px;border-radius:50px;font-size:15.5px;font-weight:700;font-family:var(--fh)"><i class="fa fa-phone"></i><span id="cph1">9003845060</span></a>
+      <a href="tel:9952740025" style="display:flex;align-items:center;gap:9px;background:var(--bg);color:var(--navy);padding:13px 26px;border-radius:50px;font-size:15.5px;font-weight:700;border:2px solid var(--border);font-family:var(--fh)"><i class="fa fa-phone" style="color:var(--blue)"></i><span id="cph2">9952740025</span></a>
+    </div>
+    <div class="br-grid" id="branches-grid" data-aos="fade-up"></div>
+    <div class="enq-sect" data-aos="fade-up">
+      <h3>Send Us an Enquiry</h3>
+      <div class="enq-wrap">
+        <div class="fr">
+          <div class="fg"><label>Full Name *</label><input type="text" id="enq-name" placeholder="Your full name"/></div>
+          <div class="fg"><label>Phone Number *</label><input type="tel" id="enq-phone" placeholder="Phone number"/></div>
+        </div>
+        <div class="fr">
+          <div class="fg"><label>Email (optional)</label><input type="email" id="enq-email" placeholder="Your email"/></div>
+          <div class="fg"><label>Course Interested In</label><select id="enq-course"><option value="">Select a course</option></select></div>
+        </div>
+        <div class="fg"><label>Message</label><textarea id="enq-msg" placeholder="Any questions or additional information..."></textarea></div>
+        <button class="f-submit" id="enq-btn" onclick="submitEnquiry()"><i class="fa fa-paper-plane"></i>Send Enquiry</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="ft-affil"><i class="fa fa-shield-halved"></i><span id="ft-affil">Affiliated to Tamilnadu State Council of Professional Education · Approved by Central and State Government</span></div>
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="ft-logo-row">
+          <div class="ft-logo-box" id="ft-logo-box" style="overflow:hidden">P</div>
+          <div class="ft-brand-name">Payitragam Professional Institute<span>E for Education, P for Payitragam</span></div>
+        </div>
+        <p>Government certified professional training institute offering 30+ healthcare and vocational courses with 100% placement guarantee in Tirunelveli, Tamil Nadu.</p>
+        <div class="soc-row">
+          <a href="#" id="fb-link" class="soc" style="display:none"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" id="ig-link" class="soc" style="display:none"><i class="fab fa-instagram"></i></a>
+          <a href="#" id="yt-link" class="soc" style="display:none"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/919003845060" id="wa-footer" class="soc" style="background:#25d366;border-color:#25d366;display:none"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="ft-col"><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#courses">Courses</a></li><li><a href="#why">Why Choose Us</a></li><li><a href="#about">About Us</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div class="ft-col"><h4>Course Types</h4><ul><li><a href="#courses">Certificate Courses</a></li><li><a href="#courses">Para Medical Diploma</a></li><li><a href="#courses">Diploma Programs</a></li><li><a href="#courses">B-VOC / M-VOC</a></li><li><a href="#courses">Vocational Courses</a></li></ul></div>
+      <div class="ft-col"><h4>Contact Info</h4>
+        <div class="ft-ci"><i class="fa fa-map-marker-alt"></i><span id="ft-addr1">122A, 6th Cross Street, South Balabkiya Nagar, Tirunelveli - 627001</span></div>
+        <div class="ft-ci"><i class="fa fa-phone"></i><span><a href="tel:9003845060" id="ft-ph1" style="color:inherit">9003845060</a> / <a href="tel:9952740025" id="ft-ph2" style="color:inherit">9952740025</a></span></div>
+        <div class="ft-ci"><i class="fa fa-envelope"></i><span id="ft-email">payitragam@gmail.com</span></div>
+        <div class="ft-ci"><i class="fa fa-clock"></i><span>Mon–Sat 9:00 AM – 5:00 PM</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="ft-bottom">
+      <span>© 2025 Payitragam Professional Institute. All rights reserved.</span>
+      <span>Affiliated to TNSCPE · Approved by Central & State Govt</span>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /site-wrapper -->
+
+<!-- FLOATS -->
+<div class="floats">
+  <button class="float-btn top-btn" id="top-btn" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa fa-chevron-up"></i></button>
+  <a href="https://wa.me/919003845060" id="wa-float" target="_blank" class="float-btn wa-btn" title="WhatsApp" style="display:none"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<!-- ENQUIRY MODAL -->
+<div id="enq-modal">
+  <div class="em-box">
+    <div class="em-hdr"><h3>Send Enquiry</h3><button class="em-x" onclick="closeEnqModal()">✕</button></div>
+    <div class="em-body">
+      <div class="em-course" id="em-course-badge"><i class="fa fa-graduation-cap"></i><span id="em-course-text">General Enquiry</span></div>
+      <div class="fr">
+        <div class="fg"><label>Full Name *</label><input type="text" id="m-name" placeholder="Your full name"/></div>
+        <div class="fg"><label>Phone *</label><input type="tel" id="m-phone" placeholder="Phone number"/></div>
+      </div>
+      <div class="fg"><label>Email (optional)</label><input type="email" id="m-email" placeholder="Your email"/></div>
+      <div class="fg"><label>Message</label><textarea id="m-msg" placeholder="Any questions..." style="height:78px"></textarea></div>
+      <button class="f-submit" id="modal-btn" onclick="submitModalEnquiry()"><i class="fa fa-paper-plane"></i>Submit Enquiry</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast-wrap"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+const SB_URL='https://sapxuilhtxlqxrmsskfg.supabase.co';
+const SB_KEY='sb_publishable_b4HdXx0c6O6kK4lTiTm0OA_EcA7HSfZ';
+const{createClient}=supabase;
+const sb=createClient(SB_URL,SB_KEY);
+AOS.init({duration:700,once:true,offset:50});
+
+let allCrs=[],lbImgs=[],lbIdx=0,allGalImgs=[],modalCourse='',heroStats={courses:30,placement:100,branches:2,students:1000};
+let mobileNavOpen=false;
+
+/* ── LOADER ── */
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('hide'),1500));
+
+/* ── MOBILE NAV ── */
+function toggleMobileNav(){mobileNavOpen?closeMobileNav():openMobileNav()}
+function openMobileNav(){
+  mobileNavOpen=true;
+  document.getElementById('mobile-nav').classList.add('open');
+  document.getElementById('hamburger').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeMobileNav(){
+  mobileNavOpen=false;
+  document.getElementById('mobile-nav').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow='';
+}
+function handleMobileNavClick(e){if(e.target===document.getElementById('mobile-nav'))closeMobileNav()}
+
+/* ── SCROLL ── */
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  document.getElementById('navbar').classList.toggle('scrolled',y>60);
+  document.getElementById('top-btn').classList.toggle('show',y>400);
+  // scroll spy
+  const ids=['home','why','benefits','courses','about','gallery','announcements','contact'];
+  let cur='';
+  ids.forEach(id=>{const el=document.getElementById(id);if(el&&el.offsetTop-100<=y)cur=id});
+  document.querySelectorAll('.nav-links a').forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+cur)a.classList.add('active')});
+  document.querySelectorAll('.mn-link').forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+cur)a.classList.add('active')});
+});
+
+/* ── COUNTER ── */
+function animN(el,target,dur=2000){let v=0,step=target/dur*16;const t=setInterval(()=>{v+=step;if(v>=target){v=target;clearInterval(t)}el.textContent=Math.floor(v)},16)}
+const cObs=new IntersectionObserver(e=>{if(e[0].isIntersecting){animN(document.getElementById('cnt-c'),heroStats.courses);animN(document.getElementById('cnt-p'),heroStats.placement);animN(document.getElementById('cnt-b'),heroStats.branches);animN(document.getElementById('cnt-s'),heroStats.students);cObs.disconnect()}},{threshold:.4});
+if(document.getElementById('home'))cObs.observe(document.getElementById('home'));
+
+/* ── TOAST ── */
+function toast(msg,type='success'){
+  const t=document.createElement('div');t.className=`toast ${type}`;
+  t.innerHTML=`<i class="fa fa-${type==='success'?'check-circle':'exclamation-circle'}"></i>${msg}`;
+  document.getElementById('toast-wrap').appendChild(t);
+  setTimeout(()=>t.remove(),4200);
+}
+
+/* ── MODAL ── */
+function openEnqModal(course=''){
+  modalCourse=course||'General Enquiry';
+  document.getElementById('em-course-text').textContent=modalCourse;
+  document.getElementById('enq-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeEnqModal(){document.getElementById('enq-modal').classList.remove('open');document.body.style.overflow=''}
+document.getElementById('enq-modal').addEventListener('click',e=>{if(e.target===document.getElementById('enq-modal'))closeEnqModal()});
+
+/* ── LIGHTBOX ── */
+function openLb(idx){lbIdx=idx;updLb();document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden'}
+function updLb(){const i=lbImgs[lbIdx];document.getElementById('lb-img').src=i.src;document.getElementById('lb-cap').textContent=i.cap||''}
+document.getElementById('lb-close').onclick=closeLb;
+document.getElementById('lb-prev').onclick=()=>{lbIdx=(lbIdx-1+lbImgs.length)%lbImgs.length;updLb()};
+document.getElementById('lb-next').onclick=()=>{lbIdx=(lbIdx+1)%lbImgs.length;updLb()};
+document.getElementById('lb').onclick=e=>{if(e.target===document.getElementById('lb'))closeLb()};
+function closeLb(){document.getElementById('lb').classList.remove('open');document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeLb();closeEnqModal();closeMobileNav()}
+  if(e.key==='ArrowLeft'&&lbImgs.length){lbIdx=(lbIdx-1+lbImgs.length)%lbImgs.length;updLb()}
+  if(e.key==='ArrowRight'&&lbImgs.length){lbIdx=(lbIdx+1)%lbImgs.length;updLb()}
+});
+
+/* ── COURSE FILTER ── */
+document.getElementById('course-filters').addEventListener('click',e=>{
+  const btn=e.target.closest('.cf-btn');if(!btn)return;
+  document.querySelectorAll('.cf-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCourses(btn.dataset.filter);
+});
+const TC={'Certificate':'#0f766e','Para Medical':'#e63946','Diploma':'#1565c0','Vocational':'#d97706','B-VOC':'#7c3aed','M-VOC':'#7c3aed'};
+const TB={'Certificate':'#d1fae5','Para Medical':'#fce4ec','Diploma':'#e8f0fe','Vocational':'#fef3c7','B-VOC':'#ede9fe','M-VOC':'#ede9fe'};
+function renderCourses(filter='all'){
+  const grid=document.getElementById('courses-grid');
+  const filtered=filter==='all'?allCrs:allCrs.filter(c=>c.inst_course_categories&&c.inst_course_categories.slug===filter);
+  if(!filtered.length){grid.innerHTML='<div class="crs-empty"><i class="fa fa-search" style="font-size:28px;display:block;margin-bottom:10px;color:#ccc"></i>No courses in this category.</div>';return}
+  const clr=c=>TC[c.course_type]||'#1565c0';
+  const bg=c=>TB[c.course_type]||'#e8f0fe';
+  grid.innerHTML=filtered.map(c=>`<div class="cc" style="--cc-c:${clr(c)}"><div class="cc-bar"></div><div class="cc-thumb">${c.thumbnail_url?`<img src="${c.thumbnail_url}" alt="${c.name}" loading="lazy"/>`:'<div class="cc-thumb-ph">🎓</div>'}</div><div class="cc-body"><div class="cc-type" style="background:${bg(c)};color:${clr(c)}">${c.course_type}</div><div class="cc-name">${c.name}</div><div class="cc-meta"><div class="cc-meta-item"><i class="fa fa-clock"></i>${c.duration}</div><div class="cc-meta-item"><i class="fa fa-graduation-cap"></i>${c.qualification}</div></div><div class="cc-desc">${c.description||'Government certified course with practical training and 100% placement assistance.'}</div><div class="cc-footer"><button class="cc-enq" onclick="openEnqModal('${c.name.replace(/'/g,'&#39;')}')">Enquire Now</button></div></div></div>`).join('');
+}
+
+/* ── GALLERY FILTER ── */
+function renderGal(imgs){
+  const grid=document.getElementById('gal-grid');lbImgs=[];
+  if(!imgs||!imgs.length){grid.innerHTML='<div class="gal-empty">📸 No gallery images yet. Check back soon!</div>';return}
+  grid.innerHTML=imgs.map((img,i)=>{lbImgs.push({src:img.image_url,cap:img.caption||''});return`<div class="gal-item" onclick="openLb(${i})">${img.image_url?`<img src="${img.image_url}" alt="${img.caption||''}" loading="lazy"/>`:'<div class="gal-ph">🖼️</div>'}<div class="gal-ov"><div class="gal-cap">${img.caption||''}</div></div></div>`}).join('');
+}
+function filterGal(slug,btn){document.querySelectorAll('.gal-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderGal(slug==='all'?allGalImgs:allGalImgs.filter(i=>i.inst_gallery_categories&&i.inst_gallery_categories.slug===slug))}
+
+/* ── ENQUIRY SUBMIT ── */
+async function submitEnquiry(){
+  const name=document.getElementById('enq-name').value.trim();
+  const phone=document.getElementById('enq-phone').value.trim();
+  if(!name||!phone){toast('Please fill Name and Phone number.','error');return}
+  const btn=document.getElementById('enq-btn');
+  btn.disabled=true;btn.innerHTML='<i class="fa fa-spinner fa-spin"></i>Sending...';
+  const{error}=await sb.from('inst_enquiries').insert({name,phone,email:document.getElementById('enq-email').value.trim(),course_name:document.getElementById('enq-course').value,message:document.getElementById('enq-msg').value.trim()});
+  btn.disabled=false;btn.innerHTML='<i class="fa fa-paper-plane"></i>Send Enquiry';
+  if(error){toast('Error sending. Please try again.','error');return}
+  toast('Enquiry sent! We will contact you soon. 🎉');
+  ['enq-name','enq-phone','enq-email','enq-msg'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('enq-course').value='';
+}
+async function submitModalEnquiry(){
+  const name=document.getElementById('m-name').value.trim();
+  const phone=document.getElementById('m-phone').value.trim();
+  if(!name||!phone){toast('Please fill Name and Phone number.','error');return}
+  const btn=document.getElementById('modal-btn');
+  btn.disabled=true;btn.innerHTML='<i class="fa fa-spinner fa-spin"></i>Sending...';
+  const{error}=await sb.from('inst_enquiries').insert({name,phone,email:document.getElementById('m-email').value.trim(),course_name:modalCourse,message:document.getElementById('m-msg').value.trim()});
+  btn.disabled=false;btn.innerHTML='<i class="fa fa-paper-plane"></i>Submit Enquiry';
+  if(error){toast('Error sending. Please try again.','error');return}
+  toast('Enquiry sent! We will contact you soon. 🎉');
+  ['m-name','m-phone','m-email','m-msg'].forEach(id=>document.getElementById(id).value='');
+  closeEnqModal();
+}
+
+/* ── LOAD DATA ── */
+async function loadSiteSettings(){
+  const{data}=await sb.from('inst_site_settings').select('*').single();
+  if(!data)return;
+  // Maintenance check
+  if(data.maintenance_mode){
+    document.getElementById('site-wrapper').classList.remove('show');
+    document.getElementById('maintenance-page').classList.add('show');
+    if(data.maintenance_title)document.getElementById('mp-title').textContent=data.maintenance_title;
+    if(data.maintenance_message)document.getElementById('mp-msg').textContent=data.maintenance_message;
+    if(data.phone1){document.getElementById('mp-ph1').href='tel:'+data.phone1;document.getElementById('mp-ph1').querySelector('span').textContent=data.phone1}
+    if(data.phone2){document.getElementById('mp-ph2').href='tel:'+data.phone2;document.getElementById('mp-ph2').querySelector('span').textContent=data.phone2}
+    if(data.affiliation)document.getElementById('mp-affil').textContent=data.affiliation;
+    return false;
+  }else{
+    document.getElementById('maintenance-page').classList.remove('show');
+    document.getElementById('site-wrapper').classList.add('show');
+  }
+  document.title=data.institute_name+' | Government Certified Courses Tirunelveli';
+  document.getElementById('nav-title').innerHTML=data.institute_name+'<span>'+data.tagline+'</span>';
+  document.getElementById('mn-name').innerHTML=data.institute_name+'<span>Professional Courses</span>';
+  document.getElementById('ld-name').textContent=data.institute_name;
+  // Apply favicon
+  if(data.favicon_url){let lnk=document.querySelector("link[rel*='icon']");if(!lnk){lnk=document.createElement('link');lnk.rel='icon';document.head.appendChild(lnk)}lnk.href=data.favicon_url;}
+  // Apply logo everywhere
+  if(data.logo_url){
+    const logoImg=`<img src="${data.logo_url}" style="width:100%;height:100%;object-fit:contain;border-radius:inherit" alt="logo"/>`;
+    document.getElementById('nav-logo-box').innerHTML=logoImg;
+    document.getElementById('mn-logo').innerHTML=logoImg;
+    document.getElementById('ft-logo-box').innerHTML=logoImg;
+  }
+  if(data.phone1){
+    document.getElementById('nav-phone-txt').textContent=data.phone1;
+    document.getElementById('nav-phone').href='tel:'+data.phone1;
+    document.getElementById('mn-ph1-txt').textContent=data.phone1;
+    document.querySelector('#mobile-nav .mn-phone:first-of-type').href='tel:'+data.phone1;
+    document.getElementById('cph1').textContent=data.phone1;
+    document.getElementById('ft-ph1').textContent=data.phone1;
+    document.getElementById('ft-ph1').href='tel:'+data.phone1;
+  }
+  if(data.phone2){
+    document.getElementById('mn-ph2-txt').textContent=data.phone2;
+    document.getElementById('cph2').textContent=data.phone2;
+    document.getElementById('ft-ph2').textContent=data.phone2;
+    document.getElementById('ft-ph2').href='tel:'+data.phone2;
+  }
+  if(data.email)document.getElementById('ft-email').textContent=data.email;
+  if(data.affiliation){document.getElementById('hero-affil').textContent=data.affiliation;document.getElementById('ft-affil').textContent=data.affiliation}
+  if(data.fb_url && data.fb_url !== '#'){document.getElementById('fb-link').href=data.fb_url; document.getElementById('fb-link').style.display='flex';}
+  if(data.ig_url && data.ig_url !== '#'){document.getElementById('ig-link').href=data.ig_url; document.getElementById('ig-link').style.display='flex';}
+  if(data.yt_url && data.yt_url !== '#'){document.getElementById('yt-link').href=data.yt_url; document.getElementById('yt-link').style.display='flex';}
+  if(data.wa_number){
+    const u='https://wa.me/'+data.wa_number;
+    if(document.getElementById('wa-float')) { document.getElementById('wa-float').href=u; document.getElementById('wa-float').style.display='flex'; }
+    if(document.getElementById('wa-footer')) { document.getElementById('wa-footer').href=u; document.getElementById('wa-footer').style.display='flex'; }
+  }
+  return true;
+}
+async function loadHeroContent(){
+  const{data}=await sb.from('inst_hero_content').select('*').single();
+  if(!data)return;
+  if(data.headline)document.getElementById('hero-headline').innerHTML=data.headline.replace(/\n/g,'<br>').replace(/\\n/g,'<br>');
+  if(data.subheadline)document.getElementById('hero-sub').textContent=data.subheadline;
+  heroStats={courses:data.stat_courses||30,placement:data.stat_placement||100,branches:data.stat_branches||2,students:data.stat_students||1000};
+}
+async function loadAboutContent(){
+  const{data}=await sb.from('inst_about_content').select('*').single();
+  if(!data)return;
+  if(data.story)document.getElementById('about-story').textContent=data.story;
+  if(data.mission)document.getElementById('about-mission').textContent=data.mission;
+  if(data.vision)document.getElementById('about-vision').textContent=data.vision;
+  if(data.affiliation_badges){
+    const b=Array.isArray(data.affiliation_badges)?data.affiliation_badges:JSON.parse(data.affiliation_badges);
+    document.getElementById('about-badges').innerHTML=b.map(x=>`<div class="ab-badge-item"><i class="fa fa-check"></i>${x}</div>`).join('');
+  }
+}
+async function loadBenefits(){
+  const{data}=await sb.from('inst_benefits').select('*').order('order_index');
+  if(!data||!data.length)return;
+  document.getElementById('benefits-grid').innerHTML=data.map((b,i)=>`<div class="ben-card" data-aos="zoom-in" data-aos-delay="${i*80}"><span class="bc-icon">${b.icon}</span><h3>${b.title}</h3><p>${b.description}</p></div>`).join('');
+}
+async function loadCourses(){
+  const{data}=await sb.from('inst_courses').select('*,inst_course_categories(name,slug,color_hex)').order('order_index');
+  if(!data)return;
+  allCrs=data;
+  heroStats.courses=data.length;
+  if(document.getElementById('cnt-c')) document.getElementById('cnt-c').textContent=data.length;
+  const sel=document.getElementById('enq-course');
+  sel.innerHTML='<option value="">Select a course</option>'+data.map(c=>`<option value="${c.name}">${c.name}</option>`).join('');
+  renderCourses('all');
+  const items=data.map(c=>`<span class="mq-item">${c.name}</span>`).join('');
+  if(items){document.getElementById('mq-track').innerHTML=items+items}
+}
+async function loadBranches(){
+  const{data}=await sb.from('inst_branches').select('*').order('order_index');
+  if(!data||!data.length)return;
+  document.getElementById('branches-grid').innerHTML=data.map(b=>{
+    let mapHtml='';
+    if(b.map_embed_url){
+      let src=b.map_embed_url.trim();
+      let embedSrc='';
+      // Case 1: proper /maps/embed?pb= URL or output=embed
+      if(src.includes('/maps/embed') || src.includes('output=embed')){
+        embedSrc=src;
+      }
+      // Case 2: full <iframe> code pasted
+      else if(src.includes('<iframe')){
+        const m=src.match(/src="([^"]+)"/);
+        if(m) embedSrc=m[1];
+      }
+      // Case 3: google.com share URL with @lat,lng — convert to embed
+      else if(src.includes('google.com/maps')){
+        const coord=src.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
+        if(coord) embedSrc=`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943!2d${coord[2]}!3d${coord[1]}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1746400000000`;
+        else embedSrc=src; // fallback, try to embed anyway
+      } else {
+        embedSrc=src; // fallback
+      }
+      if(embedSrc){
+        mapHtml=`<iframe src="${embedSrc}" class="map-box" style="display:block;height:210px;border-radius:12px;width:100%;border:none" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+      }
+    }
+    if(!mapHtml) mapHtml=`<div class="map-box" style="height:210px;border-radius:12px;border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--text2)"><span style="font-size:36px">🗺️</span><span style="font-size:12px">No map added</span></div>`;
+    return `<div class="br-card"><div class="br-head"><i class="fa fa-map-marker-alt"></i><h3>${b.branch_name}</h3></div><div class="br-body"><div class="b-info"><i class="fa fa-location-dot"></i><span>${b.address}</span></div><div class="b-info"><i class="fa fa-phone"></i><span><a href="tel:${b.phone}" style="color:var(--blue);font-weight:600">${b.phone}</a></span></div>${mapHtml}</div></div>`;
+  }).join('');
+  if(data[0])document.getElementById('ft-addr1').textContent=data[0].address;
+}
+async function loadGallery(){
+  const{data:cats}=await sb.from('inst_gallery_categories').select('*').order('order_index');
+  const{data:imgs}=await sb.from('inst_gallery_images').select('*,inst_gallery_categories(name,slug)').order('order_index');
+  allGalImgs=imgs||[];
+  const allCats=[{name:'All',slug:'all'},...(cats||[])];
+  document.getElementById('gal-filters').innerHTML=allCats.map((c,i)=>`<button class="gal-btn${i===0?' active':''}" onclick="filterGal('${c.slug}',this)">${c.name}</button>`).join('');
+  renderGal(allGalImgs);
+}
+async function loadAnnouncements(){
+  const{data}=await sb.from('inst_announcements').select('*').order('is_pinned',{ascending:false}).order('announcement_date',{ascending:false});
+  const grid=document.getElementById('ann-grid');
+  if(!data||!data.length){grid.innerHTML='<div class="ann-empty">No announcements right now.</div>';return}
+  grid.innerHTML=data.map(a=>{const d=new Date(a.announcement_date).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});return`<div class="ann-card${a.is_pinned?' pinned':''}"><div class="ann-top"><span class="ann-badge" style="background:${a.badge_color||'#1565c0'}">Notice</span>${a.is_pinned?'<span class="ann-pin">📌 Pinned</span>':''}</div><div class="ann-date"><i class="fa fa-calendar"></i>${d}</div><h3>${a.title}</h3><p>${a.description}</p></div>`}).join('');
+}
+async function init(){
+  const ok=await loadSiteSettings();
+  if(ok===false)return; // maintenance mode
+  await Promise.all([loadHeroContent(),loadAboutContent(),loadBenefits(),loadCourses(),loadBranches(),loadGallery(),loadAnnouncements()]);
+}
+init();
+</script>
+</body>
+</html>
